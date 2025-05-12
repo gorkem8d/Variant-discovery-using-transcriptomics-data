@@ -20,21 +20,21 @@ The second approach implements an unsupervised machine learning algorithm to sco
  
 	* Local outlier factor: Compares the density deviation of a point from its neighbors. Points with lower density than their neighbors are considered outliers or anomalies
  
--Combine anomaly scores: 
+* Combine anomaly scores: 
 
-	-Another level of anomaly detection is PCA distance scores, catches the extremes, simpler (to catch variants without clear pathogenic behavior but may be potentially important)
+  	* Another level of anomaly detection is PCA distance scores, catches the extremes, simpler (to catch variants without clear pathogenic behavior but may be potentially important)
  
-	-The scores are combined with adaptive weights based on variant characteristics
+	* The scores are combined with adaptive weights based on variant characteristics
  
--Score transformation:
+* Score transformation:
 
-	-Adaptive sigmoid function, steepness lower when there is missing values. expresses reduced statistical confidence when data is missing.
+  * Adaptive sigmoid function, steepness lower when there is missing values. expresses reduced statistical confidence when data is missing.
  
-	-Boosts for specific cases, such as rare variants with high impact. 
+	* Boosts for specific cases, such as rare variants with high impact. 
  
--Missing data post-processing
+* Missing data post-processing
 
-	-Boosting what is available to compansate the missing data. To counteract the systemic bias because variants with missing prediction data often receive lower initial scores (Eg. No prediction data but only present in SLE patients) 
+	* Boosting what is available to compansate the missing data. To counteract the systemic bias because variants with missing prediction data often receive lower initial scores (Eg. No prediction data but only present in SLE patients) 
  
 In the end we have the output, a score for each variant.
 
