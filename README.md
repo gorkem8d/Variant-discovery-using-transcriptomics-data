@@ -42,7 +42,7 @@ The pipeline was validated on three independent RNA-seq datasets:
 ### Workflow Management
 - **System:** Snakemake workflow management
 - **Execution:** High-performance computing (HPC) cluster with parallel processing
-- **Working Directory:** `/home/claude` (all temporary work)
+
 
 ---
 
